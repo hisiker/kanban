@@ -1,0 +1,72 @@
+<!-- 
+    문서의 시작 정의 (XML) single open tag 
+-->
+<!DOCTYPE html>
+<!-- 
+    문서안의 HTML 시작표시 
+-->
+<html lang="ko">
+<!-- 
+    문서의 메타데이터 포함 
+-->
+
+<head>
+    <!-- 
+        HTML 문서에 관한 정보 제공 
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        문서의 타이틀 설정 [ Non Client Area ]
+    -->
+    <title>Kanban Board</title>
+    <!-- 
+        스타일시트 또는 파비콘(favicon)과 같은 외부 소스와의 연관성 정의 
+    -->
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 
+        module로 지정되면 모든 html의 모든 요소가 load된 후에
+        작동되는 방식인 defer 형식이 강제된다.
+    -->
+    <script type="module" src="index.js"></script>
+</head>
+<!-- 
+    HTML 문서안의 컨텐츠 정의 [ Client Area ]
+-->
+
+<body>
+    <nav>
+        <div></div>
+        <div>Kanban Board</div>
+        <div></div>
+    </nav>
+    <div class="column-container">
+        <div class="column" data-card-category="todo">
+            <div class="column-header">할 일</div>
+            <div class="card card-create" onclick="createCard(event)">+</div>
+            <section class="card-container"></section>
+        </div>
+        <div class="column" data-card-category="ongoing">
+            <div class="column-header ongoing">진행중</div>
+            <div class="card card-create" onclick="createCard(event)">+</div>
+            <section class="card-container"></section>
+        </div>
+        <div class="column" data-card-category="test">
+            <div class="column-header test">테스트</div>
+            <div class="card card-create" onclick="createCard(event)">+</div>
+            <section class="card-container"></section>
+        </div>
+        <div class="column" data-card-category="done">
+            <div class="column-header done">완료</div>
+            <div class="card card-create" onclick="createCard(event)">+</div>
+            <section class="card-container"></section>
+        </div>
+    </div>
+    <!-- 
+        <script type="module" src="index.js"></script> 
+    -->
+</body>
+
+</html>
